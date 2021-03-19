@@ -25,9 +25,7 @@ MH_STATUS spookydash::removeHook(PVOID hook) {
 export MH_STATUS spookydash::initialize() {
 	if (!is_initialized) {
 		is_initialized = true;
-		MH_STATUS result = MH_Initialize();
-		std::cout << result << std::endl;
-		return result;
+		return MH_Initialize();
 	}
 	else {
 		return MH_ERROR_ALREADY_INITIALIZED;
@@ -47,9 +45,9 @@ export MH_STATUS spookydash::uninitialize() {
 
 /* wrapper for MH_CreateHook (automaticaly enables hook)
 call like this create_hook(MenuLayer::init, MenuLayer::_init, mycallback)*/
-export MH_STATUS spookydash::create_hook(PVOID target, LPVOID callback) {
+export MH_STATUS spookydash::create_hook(PVOID target, void* original, LPVOID callback) {
 	if (is_initialized) {
-		MH_STATUS result = MH_CreateHook(target, callback, NULL); //(LPVOID*)&targetFunction
+		MH_STATUS result = MH_CreateHook(target, callback, (LPVOID*)original); //(LPVOID*)&targetFunction
 		//addHook(target);
 		return result;
 	}
@@ -71,7 +69,7 @@ export MH_STATUS spookydash::remove_hook(LPVOID targetFunction) {
 // wrapper for MH_EnableHook
 export MH_STATUS spookydash::enable_hook(LPVOID target) {
 	if (is_initialized) {
-		std::cout << MH_EnableHook(target) << std::endl;
+		MH_EnableHook(target);
 	}
 	else {
 		return MH_ERROR_NOT_INITIALIZED;

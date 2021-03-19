@@ -152,8 +152,10 @@
     <ClInclude Include="GameManager.h" />
     <ClInclude Include="GJGameLevel.h" />
     <ClInclude Include="GManager.h" />
+    <ClInclude Include="macros.h" />
     <ClInclude Include="PlayLayer.h" />
     <ClInclude Include="spookydash.h" />
+    <ClInclude Include="trampoline.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="spookydash.cpp" />
