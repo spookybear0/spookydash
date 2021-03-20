@@ -8,8 +8,10 @@
 #include "GJGameLevel.h"
 #include "GJAccountManager.h"
 #include "AchievementBar.h"
+#include "AchievementNotifier.h"
 
 #include "trampoline.h"
+#include "hackpro.h"
 
 namespace spookydash {
 	bool is_initialized = false;
