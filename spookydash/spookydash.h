@@ -6,6 +6,9 @@
 #include "PlayLayer.h"
 #include "GameManager.h"
 #include "GJGameLevel.h"
+#include "GJAccountManager.h"
+#include "AchievementBar.h"
+
 #include "trampoline.h"
 
 namespace spookydash {

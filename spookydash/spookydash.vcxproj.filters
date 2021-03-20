@@ -36,6 +36,12 @@
     <ClInclude Include="trampoline.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="GJAccountManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AchievementBar.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="spookydash.cpp">

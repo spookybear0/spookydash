@@ -149,6 +149,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="AchievementBar.h" />
+    <ClInclude Include="GJAccountManager.h" />
     <ClInclude Include="GameManager.h" />
     <ClInclude Include="GJGameLevel.h" />
     <ClInclude Include="GManager.h" />
