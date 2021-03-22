@@ -5,8 +5,8 @@
 USING_NS_CC;
 
 class PauseLayer : public CCLayerColor {
-	static bool __fastcall init(PauseLayer* self) {
-		return reinterpret_cast<bool(__thiscall*)(PauseLayer * self)>(base + 0x1E4620)(self);
+	bool init() {
+		return reinterpret_cast<bool(__thiscall*)(PauseLayer * self)>(base + 0x1E4620)(this);
 	}
 	static PVOID _init;
 };

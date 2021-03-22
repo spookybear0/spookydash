@@ -5,8 +5,8 @@
 USING_NS_CC;
 
 class GameSoundManager : public CCNode {
-	static GameSoundManager* __fastcall sharedState() {
-		return reinterpret_cast<GameSoundManager*(__fastcall*)()>(base + 0x24800)();
+	static GameSoundManager* __stdcall sharedState() {
+		return reinterpret_cast<GameSoundManager*(__stdcall*)()>(base + 0x24800)();
 	}
 	static PVOID _sharedState;
 };

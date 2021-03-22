@@ -8,8 +8,8 @@ USING_NS_CC;
 // needs testing, do not expect to work
 class AchievementManager : public CCNode {
 public:
-	AchievementManager* __fastcall sharedState() {
-		return reinterpret_cast<AchievementManager* (__fastcall*)()>(base + 0x7B10)();
+	AchievementManager* __stdcall sharedState() {
+		return reinterpret_cast<AchievementManager* (__stdcall*)()>(base + 0x7B10)();
 	}
 	static PVOID _sharedState;
 };

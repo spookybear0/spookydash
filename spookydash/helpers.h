@@ -11,7 +11,7 @@ namespace helpers {
 	// Shows a basic achievement
 	AchievementBar* showAchievement(const char* title, const char* text, const char* icon) {
 		AchievementNotifier* an = AchievementNotifier::sharedState();
-		AchievementBar* ach = an->notifyAchievement(title, text, icon, 0); // 0 is for achievement (not icon)
+		AchievementBar* ach = an->notifyAchievement(title, text, icon, 1); // 1 is for achievement (not icon)
 		an->showNextAchievement();
 		return ach;
 	}

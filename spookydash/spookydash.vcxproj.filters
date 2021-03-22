@@ -87,6 +87,15 @@
     <ClInclude Include="PauseLayer.h">
       <Filter>Header Files\gd</Filter>
     </ClInclude>
+    <ClInclude Include="GameObject.h">
+      <Filter>Header Files\gd</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerObject.h">
+      <Filter>Header Files\gd</Filter>
+    </ClInclude>
+    <ClInclude Include="GhostType.h">
+      <Filter>Header Files\gd</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="spookydash.cpp">

@@ -1,6 +1,5 @@
 #pragma once
 
-#pragma once
 #include <cocos2d.h>
 #include "macros.h"
 #include "GJBaseGameLayer.h"
@@ -10,28 +9,28 @@ USING_NS_CC;
 // needs testing, do not expect to work
 class EffectGameObject {
 public:
-	static signed int __fastcall customSetup() {
-		return reinterpret_cast<signed int(__fastcall*)()>(base + 0x254A50)();
+	bool __fastcall customSetup() {
+		return reinterpret_cast<bool(__fastcall*)(EffectGameObject * self)>(base + 0x254A50)(this);
 	}
 	static PVOID _customSetup;
 
-	int __fastcall triggerObject(GJBaseGameLayer* gamelayer) {
-		return reinterpret_cast<signed int(__fastcall*)()>(base + 0x253D60)();
+	void __thiscall triggerObject(GJBaseGameLayer* gamelayer) {
+		return reinterpret_cast<void(__thiscall*)(EffectGameObject* self, GJBaseGameLayer* gamelayer)>(base + 0x253D60)(this, gamelayer);
 	}
 	static PVOID _triggerObject;
 
-	EffectGameObject* __fastcall getSaveString() {
-		return reinterpret_cast<EffectGameObject * (__fastcall*)()>(base + 0x257560)();
+	EffectGameObject* __thiscall getSaveString() {
+		return reinterpret_cast<EffectGameObject * (__thiscall*)(EffectGameObject * self)>(base + 0x257560)(this);
 	}
 	static PVOID _getSaveString;
 
-	int __fastcall triggerActivated(float unknown) {
-		return reinterpret_cast<int(__fastcall*)(float unknown)>(base + 0x254A30)(unknown);
+	void __thiscall triggerActivated(float dt) {
+		return reinterpret_cast<void(__thiscall*)(EffectGameObject * self, float dt)>(base + 0x254A30)(this, dt);
 	}
 	static PVOID _triggerActivated;
 
-	int __fastcall spawnXPosition() {
-		return reinterpret_cast<int(__fastcall*)()>(base + 0x254A00)();
+	void __thiscall spawnXPosition() {
+		return reinterpret_cast<void(__thiscall*)(EffectGameObject * self)>(base + 0x254A00)(this);
 	}
 	static PVOID _spawnXPosition;
 };

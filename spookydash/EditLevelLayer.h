@@ -6,8 +6,8 @@
 USING_NS_CC;
 
 class EditLevelLayer : public CCLayer { 
-	static signed int __fastcall init() {
-		return reinterpret_cast<signed int(__fastcall*)()>(base + 0x6F5D0)();
+	bool init() {
+		return reinterpret_cast<bool(__fastcall*)(EditLevelLayer * self)>(base + 0x6F5D0)(this);
 	}
 	static PVOID _init;
 };
