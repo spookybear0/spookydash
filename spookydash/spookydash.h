@@ -9,6 +9,11 @@
 #include "GJAccountManager.h"
 #include "AchievementBar.h"
 #include "AchievementNotifier.h"
+#include "AchievementManager.h"
+#include "EffectGameObject.h"
+#include "GJBaseGameLayer.h"
+#include "EditLevelLayer.h"
+#include "FLAlertLayer.h"
 
 #include "trampoline.h"
 #include "hackpro.h"

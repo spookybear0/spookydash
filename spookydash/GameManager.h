@@ -2,10 +2,11 @@
 #include "GManager.h"
 #include "Windows.h"
 #include "macros.h"
+#include <cocos2d.h>
 
 class GameManager : public GManager {
 public:
-	static GameManager* __stdcall getSharedState() {
+	static GameManager* __stdcall sharedState() {
 		return reinterpret_cast<GameManager* (__stdcall*)()>(base + 0xC4A50)();
 	}
 	static PVOID _getSharedState;
