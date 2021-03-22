@@ -8,6 +8,14 @@
 #include "GJAccountManager.h"
 
 namespace helpers {
+	void create_console() {
+		AllocConsole();
+		FILE* fDummy;
+		freopen_s(&fDummy, "CONIN$", "r", stdin);
+		freopen_s(&fDummy, "CONOUT$", "w", stderr);
+		freopen_s(&fDummy, "CONOUT$", "w", stdout);
+	}
+
 	// Shows a basic achievement
 	AchievementBar* showAchievement(const char* title, const char* text, const char* icon) {
 		AchievementNotifier* an = AchievementNotifier::sharedState();
