@@ -27,8 +27,10 @@ public:
 	}
 	static PVOID _showNextAchievement;
 
-	void notifyAchievement(const char* title, const char* text, const char* icon, int type) {
-		this->m_aScheduled->addObject(AchievementBar::create(title, text, icon, type));
+	AchievementBar* notifyAchievement(const char* title, const char* text, const char* icon, int type) {
+		AchievementBar* ach = AchievementBar::create(title, text, icon, type);
+		this->m_aScheduled->addObject(ach);
+		return ach;
 	}
 };
 

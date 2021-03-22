@@ -152,9 +152,11 @@
     <ClInclude Include="AchievementBar.h" />
     <ClInclude Include="AchievementManager.h" />
     <ClInclude Include="AchievementNotifier.h" />
+    <ClInclude Include="LevelEditorLayer.h" />
     <ClInclude Include="EffectGameObject.h" />
     <ClInclude Include="FLAlertLayer.h" />
     <ClInclude Include="GameLevelManager.h" />
+    <ClInclude Include="GameSoundManager.h" />
     <ClInclude Include="GJBaseGameLayer.h" />
     <ClInclude Include="EditLevelLayer.h" />
     <ClInclude Include="GJAccountManager.h" />
@@ -162,8 +164,11 @@
     <ClInclude Include="GJGameLevel.h" />
     <ClInclude Include="GManager.h" />
     <ClInclude Include="hackpro.h" />
+    <ClInclude Include="helpers.h" />
     <ClInclude Include="macros.h" />
     <ClInclude Include="MenuLayer.h" />
+    <ClInclude Include="MenuOptions.h" />
+    <ClInclude Include="PauseLayer.h" />
     <ClInclude Include="PlayLayer.h" />
     <ClInclude Include="spookydash.h" />
     <ClInclude Include="trampoline.h" />

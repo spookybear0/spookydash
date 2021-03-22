@@ -2,9 +2,11 @@
 
 #include <cocos2d.h>
 
+USING_NS_CC;
+
 enum GJLevelType { Local = 1, Editor = 2, Saved = 3 };
 
-class GJGameLevel : public cocos2d::CCNode
+class GJGameLevel : public CCNode
 {
 public:
     cocos2d::CCDictionary* lastBuildSave;

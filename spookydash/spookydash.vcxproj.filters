@@ -13,20 +13,11 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Header Files\gd">
+      <UniqueIdentifier>{654367dd-6230-47d8-95cf-79cb1c54cfb0}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="GameManager.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="GJGameLevel.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="GManager.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="PlayLayer.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="spookydash.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -36,38 +27,65 @@
     <ClInclude Include="trampoline.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="GJAccountManager.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="AchievementBar.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="AchievementNotifier.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="hackpro.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="AchievementBar.h">
+      <Filter>Header Files\gd</Filter>
+    </ClInclude>
     <ClInclude Include="AchievementManager.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\gd</Filter>
     </ClInclude>
-    <ClInclude Include="EditLevelLayer.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="GJBaseGameLayer.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="AchievementNotifier.h">
+      <Filter>Header Files\gd</Filter>
     </ClInclude>
     <ClInclude Include="EffectGameObject.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\gd</Filter>
     </ClInclude>
     <ClInclude Include="FLAlertLayer.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\gd</Filter>
     </ClInclude>
     <ClInclude Include="GameLevelManager.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\gd</Filter>
+    </ClInclude>
+    <ClInclude Include="GJBaseGameLayer.h">
+      <Filter>Header Files\gd</Filter>
+    </ClInclude>
+    <ClInclude Include="EditLevelLayer.h">
+      <Filter>Header Files\gd</Filter>
+    </ClInclude>
+    <ClInclude Include="GameManager.h">
+      <Filter>Header Files\gd</Filter>
+    </ClInclude>
+    <ClInclude Include="GJAccountManager.h">
+      <Filter>Header Files\gd</Filter>
+    </ClInclude>
+    <ClInclude Include="GJGameLevel.h">
+      <Filter>Header Files\gd</Filter>
+    </ClInclude>
+    <ClInclude Include="GManager.h">
+      <Filter>Header Files\gd</Filter>
     </ClInclude>
     <ClInclude Include="MenuLayer.h">
+      <Filter>Header Files\gd</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayLayer.h">
+      <Filter>Header Files\gd</Filter>
+    </ClInclude>
+    <ClInclude Include="helpers.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GameSoundManager.h">
+      <Filter>Header Files\gd</Filter>
+    </ClInclude>
+    <ClInclude Include="LevelEditorLayer.h">
+      <Filter>Header Files\gd</Filter>
+    </ClInclude>
+    <ClInclude Include="MenuOptions.h">
+      <Filter>Header Files\gd</Filter>
+    </ClInclude>
+    <ClInclude Include="PauseLayer.h">
+      <Filter>Header Files\gd</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

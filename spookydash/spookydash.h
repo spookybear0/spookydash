@@ -14,9 +14,13 @@
 #include "GJBaseGameLayer.h"
 #include "EditLevelLayer.h"
 #include "FLAlertLayer.h"
+#include "LevelEditorLayer.h"
+#include "MenuOptions.h"
+#include "PauseLayer.h"
 
 #include "trampoline.h"
 #include "hackpro.h"
+#include "helpers.h"
 
 namespace spookydash {
 	bool is_initialized = false;
