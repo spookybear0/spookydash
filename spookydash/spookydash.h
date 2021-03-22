@@ -29,6 +29,8 @@
 #include "hackpro.h"
 #include "helpers.h"
 
+using namespace trampoline;
+
 namespace spookydash {
 	bool is_initialized = false;
 
@@ -39,9 +41,22 @@ namespace spookydash {
 	void addHook(PVOID hook);
 	MH_STATUS removeHook(PVOID hook);
 
+	/* 
+	  wrapper for MH_CreateHook (automaticaly enables hook)
+	 
+	  call like this: create_hook(MenuLayer::_init, &MenuLayer__init, mycallback)
+	  
+	  the callback must be the same type as the original function (MenuLayer__init)
+	*/
 	export MH_STATUS create_hook(PVOID target, void* original, LPVOID callback);
+	// removes a hook
 	export MH_STATUS remove_hook(LPVOID targetFunction);
+	// enable a hook (you can also enable all hooks with enable_hook(ALL_HOOKS))
 	export MH_STATUS enable_hook(LPVOID target);
+	// initialize spookydash so hooks can be created
 	export MH_STATUS initialize();
+	// uninitialize spookydash so the dll is safe for closing
 	export MH_STATUS uninitialize();
+	// disables a hook
+	export MH_STATUS disable_hook(LPVOID target);
 }
