@@ -4,7 +4,7 @@ SpookyDash is a mod sdk to allow easier making of mods for Geometry Dash. It all
 
 ## spookymod
 
-SpookyMod is the modloader that injects mods made with SpookyDash to Geometry Dash. It is also compatible with non-SpookyDash mods. SpookyMod is not finished so for the time being I would recommended using (modldr)[https://github.com/HJfod/ModLdr] by (HJFod)[https://github.com/HJfod].
+SpookyMod is the modloader that injects mods made with SpookyDash to Geometry Dash. It is also compatible with non-SpookyDash mods. SpookyMod is not finished so for the time being I would recommended using [modldr](https://github.com/HJfod/ModLdr) by [HJFod](https://github.com/HJfod).
 
 ## SDK installation
 
