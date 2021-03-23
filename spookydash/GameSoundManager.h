@@ -7,8 +7,7 @@ USING_NS_CC;
 class GameSoundManager : public CCNode {
 	static GameSoundManager* __stdcall sharedState() {
 		return reinterpret_cast<GameSoundManager*(__stdcall*)()>(base + 0x24800)();
-	}
-	static PVOID _sharedState;
+	}; hook(_sharedState);
 };
 
-PVOID GameSoundManager::_sharedState = PVOID(base + 0x24800);
+hookdef(GameSoundManager, _sharedState, 0x24800);

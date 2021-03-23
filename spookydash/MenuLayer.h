@@ -8,8 +8,7 @@ class MenuLayer : public CCLayer {
 public:
 	bool init() {
 		return reinterpret_cast<bool(__thiscall*)(MenuLayer * self)>(base + 0x1907B0)(this);
-	}
-	static PVOID _init;
+	}; hook(_init);
 };
 
-PVOID MenuLayer::_init = PVOID(base + 0x1907B0);
+hookdef(MenuLayer, _init, 0x1907B0);

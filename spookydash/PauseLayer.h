@@ -7,8 +7,7 @@ USING_NS_CC;
 class PauseLayer : public CCLayerColor {
 	bool init() {
 		return reinterpret_cast<bool(__thiscall*)(PauseLayer * self)>(base + 0x1E4620)(this);
-	}
-	static PVOID _init;
+	}; hook(_init);
 };
 
-PVOID PauseLayer::_init = PVOID(base + 0x1DE8F0);
+hookdef(PauseLayer, _init, 0x1DE8F0);

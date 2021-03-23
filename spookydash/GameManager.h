@@ -10,13 +10,11 @@ class GameManager : public GManager {
 public:
 	static GameManager* __stdcall sharedState() {
 		return reinterpret_cast<GameManager* (__stdcall*)()>(base + 0xC4A50)();
-	}
-	static PVOID _getSharedState;
+	}; hook(_sharedState);
 
 	bool __thiscall getGameVariable(const char* key) {
 		return reinterpret_cast<bool(__thiscall*)(GameManager*, const char*)>(base + 0xC9D30)(this, key);
-	}
-	static PVOID _getGameVariable;
+	}; hook(_getGameVariable);
 
 	PlayLayer* getPlayLayer() {
 		return reinterpret_cast<PlayLayer*>(*reinterpret_cast<std::uintptr_t*>(base + 0xC4A50) + 0x164);
@@ -27,5 +25,5 @@ public:
 	}
 };
 
-PVOID GameManager::_getSharedState = PVOID(base + 0xC4A50);
-PVOID GameManager::_getGameVariable = PVOID(base + 0xC9D30);
+hookdef(GameManager, _sharedState, 0xC4A50);;
+hookdef(GameManager, _getGameVariable, 0xC9D30);;

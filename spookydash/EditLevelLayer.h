@@ -8,9 +8,8 @@ USING_NS_CC;
 class EditLevelLayer : public CCLayer { 
 	bool init() {
 		return reinterpret_cast<bool(__fastcall*)(EditLevelLayer * self)>(base + 0x6F5D0)(this);
-	}
-	static PVOID _init;
+	}; hook(_init);
 };
 // also inherits from FLAlertLayerProtocol, UploadActionDelegate, UploadPopupDelegate, SetIDPopupDelegate
 
-PVOID EditLevelLayer::_init = PVOID(base + 0x6F5D0);
+hookdef(EditLevelLayer, _init, 0x6F5D0);

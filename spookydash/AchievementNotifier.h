@@ -10,7 +10,6 @@ USING_NS_CC;
 #define __STR_CAT__(str1, str2) __STR_CAT___(str1, str2)
 #define PAD(size) char __STR_CAT__(pad, __LINE__)[size] = {};
 
-// needs testing, do not expect to work
 class AchievementNotifier : public CCNode {
 PAD(0x4)
 CCArray* m_aScheduled;
@@ -19,13 +18,11 @@ PAD(0x4)
 public:
 	static AchievementNotifier* __stdcall sharedState() {
 		return reinterpret_cast<AchievementNotifier* (__stdcall*)()>(base + 0xFC90)();
-	}
-	static PVOID _sharedState;
+	}; hook(_sharedState);
 
 	void __fastcall showNextAchievement() {
 		return reinterpret_cast<void(__fastcall*)(AchievementNotifier*)>(base + 0xFD60)(this);
-	}
-	static PVOID _showNextAchievement;
+	}; hook(_showNextAchievement);
 
 	AchievementBar* notifyAchievement(const char* title, const char* text, const char* icon, int type) {
 		AchievementBar* ach = AchievementBar::create(title, text, icon, type);
@@ -34,5 +31,5 @@ public:
 	}
 };
 
-PVOID AchievementNotifier::_sharedState = PVOID(base + 0xFC90);
-PVOID AchievementNotifier::_showNextAchievement = PVOID(base + 0xFD60);
+hookdef(AchievementNotifier, _sharedState, 0xFC90);
+hookdef(AchievementNotifier, _showNextAchievement, 0xFD60);

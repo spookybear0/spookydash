@@ -8,9 +8,7 @@ class GameLevelManager : public CCNode {
 public:
 	static GameLevelManager* __stdcall sharedState() {
 		return reinterpret_cast<GameLevelManager * (__stdcall*)()>(base + 0x9F860)();
-	}
-
-	static PVOID _sharedState;
+	}; hook(_sharedState);
 };
 
-PVOID GameLevelManager::_sharedState = PVOID(base + 0x9F860);
+hookdef(GameLevelManager, _sharedState, 0x9F860);

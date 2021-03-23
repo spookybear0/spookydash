@@ -14,14 +14,12 @@ public:
 		__asm add esp, 0x8
 
 		return toReturn;
-	}
-	static PVOID _create;
+	}; hook(_create);
 
 	CCAction* __thiscall show() {
 		return reinterpret_cast<CCAction * (__thiscall*)(AchievementBar* self)>(base + 0x3BE50)(this);
-	}
-	static PVOID _show;
+	}; hook(_show);
 };
 
-PVOID AchievementBar::_create = PVOID(base + 0x3B120);
-PVOID AchievementBar::_show = PVOID(base + 0x3BE50);
+hookdef(AchievementBar, _create, 0x3B120);
+hookdef(AchievementBar, _show, 0x3BE50);
