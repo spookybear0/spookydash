@@ -6,22 +6,6 @@
 #include <Windows.h>
 #include <vector>
 
-void spookydash::addHook(PVOID hook) {
-	hooks[arr_index] = hook;
-	++arr_index;
-}
-
-MH_STATUS spookydash::removeHook(PVOID hook) {
-	iter = std::find(hooks.begin(), hooks.end(), hook); // remove hook from list of hooks
-	if (iter != hooks.end()) {
-		return MH_RemoveHook(hook);
-	}
-	else {
-		return MH_ERROR_FUNCTION_NOT_FOUND;
-	}
-}
-
-// wrapper for MH_Initialize (and some other stuff)
 export MH_STATUS spookydash::initialize() {
 	if (!is_initialized) {
 		is_initialized = true;
@@ -45,7 +29,6 @@ export MH_STATUS spookydash::uninitialize() {
 export MH_STATUS spookydash::create_hook(PVOID target, void* original, LPVOID callback) {
 	if (is_initialized) {
 		MH_STATUS result = MH_CreateHook(target, callback, (LPVOID*)original);
-		//addHook(target);
 		return result;
 	}
 	else {
@@ -55,7 +38,6 @@ export MH_STATUS spookydash::create_hook(PVOID target, void* original, LPVOID ca
 
 export MH_STATUS spookydash::remove_hook(LPVOID targetFunction) {
 	if (is_initialized) {
-		//removeHook(targetFunction);
 		return MH_RemoveHook(targetFunction);
 	}
 	else {

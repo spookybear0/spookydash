@@ -34,13 +34,6 @@ using namespace trampoline;
 namespace spookydash {
 	bool is_initialized = false;
 
-	int arr_index = 0;
-	std::vector<PVOID> hooks;
-	std::vector<PVOID>::iterator iter;
-
-	void addHook(PVOID hook);
-	MH_STATUS removeHook(PVOID hook);
-
 	/* 
 	  wrapper for MH_CreateHook (automaticaly enables hook)
 	 
