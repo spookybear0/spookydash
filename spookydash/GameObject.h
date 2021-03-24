@@ -7,7 +7,9 @@ USING_NS_CC;
 
 class GameObject : public CCSprite { // actually is CCSpritePlus but i don't have that
 	static GameObject* __fastcall create(std::string unknown) {
-		return reinterpret_cast<GameObject*(__fastcall*)(std::string unknown)>(base + 0xCF8F0)(unknown);
+		GameObject* toReturn = reinterpret_cast<GameObject*(__fastcall*)(std::string unknown)>(base + 0xCF8F0)(unknown);
+		__asm add esp, 0x4;
+		return toReturn;
 	}; hook(_create);
 
 	void setOpacity(GLubyte opacity) {

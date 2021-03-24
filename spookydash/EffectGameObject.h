@@ -9,8 +9,8 @@ USING_NS_CC;
 // needs testing, do not expect to work
 class EffectGameObject {
 public:
-	bool __fastcall customSetup() {
-		return reinterpret_cast<bool(__fastcall*)(EffectGameObject * self)>(base + 0x254A50)(this);
+	bool __thiscall customSetup() {
+		return reinterpret_cast<bool(__thiscall*)(EffectGameObject * self)>(base + 0x254A50)(this);
 	}; hook(_customSetup);
 
 	void __thiscall triggerObject(GJBaseGameLayer* gamelayer) {

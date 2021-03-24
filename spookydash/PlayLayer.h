@@ -26,7 +26,9 @@ public:
 	}; hook(_draw);
 
 	static PlayLayer* __fastcall create(GJGameLevel* level) {
-		return reinterpret_cast<PlayLayer*(__fastcall*)(GJGameLevel * level)>(base + 0x1FB6D0)(level);
+		PlayLayer* toReturn = reinterpret_cast<PlayLayer*(__fastcall*)(GJGameLevel * level)>(base + 0x1FB6D0)(level);
+		__asm add esp, 0x4
+		return toReturn;
 	}; hook(_create);
 
 	void update(float dt) {
