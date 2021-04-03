@@ -38,12 +38,12 @@ namespace helpers {
 
 	// Gets the PlayLayer, its that simple...
 	PlayLayer* getPlayLayer() {
-		getGameManager()->getPlayLayer();
+		return getGameManager()->getPlayLayer();
 	}
 
 	// Gets the EditorLayer, its that simple...
 	LevelEditorLayer* getEditorLayer() {
-		getGameManager()->getEditorLayer();
+		return getGameManager()->getEditorLayer();
 	}
 
 	// Gets the current player's username
