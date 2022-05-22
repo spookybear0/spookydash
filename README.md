@@ -1,3 +1,8 @@
+# OLD CODE, DO NOT USE
+## this is here for archival uses
+## if you do use this, please use cmake instead of what msvc usually does
+## a similar project would be maple-ml/cinnamon or geode
+
 # spookydash
 
 SpookyDash is a mod sdk to allow easier making of mods for Geometry Dash. It allows a modder to access most Geometry Dash functions and use all cocos2d-x classes.
